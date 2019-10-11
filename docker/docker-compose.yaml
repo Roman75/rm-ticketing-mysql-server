@@ -1,0 +1,26 @@
+version: "3.7"
+
+services:
+
+  mysql:
+    image: rm_ticketing_mysql_server
+    container_name: rm_ticketing_mysql_server_container
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+    - 3306:3306
+    volumes:
+    - rm_ticketing_mysql_volume:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: Passw0Rd!
+    networks:
+      - rm_ticketing
+
+volumes:
+  rm_ticketing_mysql_volume:
+
+networks:
+  rm_ticketing:
+    external:
+      name: rm_ticketing_nat

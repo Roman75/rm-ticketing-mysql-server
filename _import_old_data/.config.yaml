@@ -1,0 +1,11 @@
+db:
+  host: 'localhost'
+  user: 'root'
+  password: 'root'
+  port: 3307
+
+local:
+  host: 'localhost'
+  user: 'ticketing_user'
+  password: 'Passw0Rd!'
+  database: 'ticketing_db'
