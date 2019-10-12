@@ -9,7 +9,7 @@ then
     exit 1
 fi
 
-cd ../docker
+cd ../
 for filename in ./sql/*.sql; do
     echo $filename
     docker exec -i rm_ticketing_mysql_server_container mysql -u root --password=$1 < $filename
