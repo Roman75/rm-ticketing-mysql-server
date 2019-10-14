@@ -3,8 +3,7 @@ version: "3.7"
 services:
 
   mysql:
-    image: rm_ticketing_mysql_server
-    container_name: rm_ticketing_mysql_server_container
+    image: romarius75/rm-ticketing-mysql-server
     build:
       context: .
       dockerfile: ./Dockerfile
